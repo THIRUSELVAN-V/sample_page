@@ -1,16 +1,22 @@
-import { useState } from 'react'
+import react, { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import Variant from './components/Variant/variant';
+import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import './App.css'
-import First from './first'
+import First from './components/First/First';
 
-function App() {
+
+const App = () => {
+  const [selectedItem, setSelectedItem] = useState(null);
   const [count, setCount] = useState(0)
-
   return (
-    <div style={{height: "100vh",width:"100wh"}}>
-      <First/>
-    </div>
+  <Router>
+    <Routes>
+      <Route path='/' element={<First/>}/>
+      <Route path='/variant' element={<Variant/>}/>
+    </Routes>
+  </Router>
   )
 }
 
