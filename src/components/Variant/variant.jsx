@@ -3,8 +3,8 @@ import cakeImage from '/src/assets/cake.jpeg';
 import "./variant.css";
 
 
-const Variant = ({item}) => {
-  if (!item) return null;
+const Variant = ({selectedItem}) => {
+  if (!selectedItemtem) return null;
 
   const getDescription = (itemName) => {
     switch (itemName) {
@@ -43,11 +43,11 @@ const Variant = ({item}) => {
 
   return (
     <div className='variant'>
-      <img src={item.img} alt={item.name} className='image'/>
+      <img src={selectedItem.img} alt={selectedItem.name} className='image'/>
       <div className='column'>
-      <div className='title'>{item.name}</div>
-      <div className='description'>{getDescription(item.name)}</div>
-      <div className='price'>$ {item.price}</div>
+      <div className='title'>{selectedItem.name}</div>
+      <div className='description'>{getDescription(selectedItem.name)}</div>
+      <div className='price'>$ {selectedItem.price}</div>
       <div className='bold'>We've been serving for over <span style={{border:'1px solid white',backgroundColor: 'rgba(0, 0, 255, 0.829)', color:'white'}}>5 years...</span></div>
       </div>
     </div>
