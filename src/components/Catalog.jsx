@@ -9,8 +9,9 @@ import natchos from "../assets/natchos.jpg";
 import hamburger from "../assets/hamburger.jpeg";
 import pizza from "../assets/pizza.jpeg";
 import { FaStar } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
-const Catalog = () => {
+const Catalog = ({setSelectedItem}) => {
   const [catalogItems, setCatalogItems] = useState([
     { img: cake, name: "Cake", price: "₹500", discription: "Sweet Cake", rating: "4.5" },
     { img: cajunChicken, name: "Cajun Chicken", price: "₹500", discription: "Delicious Chicken", rating: "4.5" },
@@ -21,6 +22,8 @@ const Catalog = () => {
     { img: hamburger, name: "Hamburger", price: "₹500", discription: "Tasty Hamburger", rating: "4.5" },
     { img: pizza, name: "Pizza", price: "₹500", discription: "Tasty Pizza", rating: "4.5" },
   ]);
+
+  const navigate = useNavigate();
 
   const [currentItems, setCurrentItems] = useState(catalogItems);
 
@@ -68,8 +71,11 @@ const Catalog = () => {
     }
   };
 
-  const handleBuyNow = (img, name,price) => {
-    console.log("Item bought:", { img, name,price });
+  const handleBuyNow = (item) => {
+    setSelectedItem(item);
+    navigate("/variant");
+    console.log("Item bought:", { item });
+
 
   };
 
@@ -90,7 +96,7 @@ const Catalog = () => {
               <img src={item.img} alt={item.name} />
               <div className="overlay"></div>
             </div>
-            <button className="btn" onClick={() => handleBuyNow(item.img, item.name,item.price)}>Buy Now</button>
+            <button className="btn" onClick={() => handleBuyNow(item)}>Buy Now</button>
             <div className="rating">
               <FaStar />
               <p className="rating-text">{item.rating}</p>
