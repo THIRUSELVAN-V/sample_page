@@ -44,7 +44,7 @@ const Variant = ({selectedItem}) => {
 
   return (
     <div className='variant'>
-      <p>Hello</p>
+      
       <img src={selectedItem.img} alt={selectedItem.name} className='image'/>
       <div className='column'>
       <div className='title'>{selectedItem.name}</div>
