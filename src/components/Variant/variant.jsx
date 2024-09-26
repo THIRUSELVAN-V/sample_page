@@ -44,12 +44,14 @@ const Variant = ({selectedItem}) => {
 
   return (
     <div className='variant'>
+      <p>Hello</p>
       <img src={selectedItem.img} alt={selectedItem.name} className='image'/>
       <div className='column'>
       <div className='title'>{selectedItem.name}</div>
       <div className='description'>{getDescription(selectedItem.name)}</div>
       <div className='price'>$ {selectedItem.price}</div>
       <div className='bold'>We've been serving for over <span style={{border:'1px solid white',backgroundColor: 'rgba(0, 0, 255, 0.829)', color:'white'}}>5 years...</span></div>
+
       </div>
     </div>
   );
