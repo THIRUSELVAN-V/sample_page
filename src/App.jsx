@@ -5,7 +5,7 @@ import Variant from './components/Variant/variant';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import './App.css'
 import First from './components/First/First';
-
+import Catalog from './components/Catalog'
 
 const App = () => {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -14,7 +14,8 @@ const App = () => {
   <Router>
     <Routes>
       <Route path='/' element={<First/>}/>
-      <Route path='/variant' element={<Variant/>}/>
+      <Route path='/variant' element={<Variant selectedItem={selectedItem}/>}/>
+      <Route path='/catalog' element={<Catalog setSelectedItem={setSelectedItem}/>}/>
     </Routes>
   </Router>
   )

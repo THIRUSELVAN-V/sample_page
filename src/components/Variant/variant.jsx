@@ -4,8 +4,9 @@ import "./variant.css";
 
 
 const Variant = ({selectedItem}) => {
-  if (!selectedItemtem) return null;
-
+  
+  console.log(selectedItem);
+  
   const getDescription = (itemName) => {
     switch (itemName) {
       case "Cake":

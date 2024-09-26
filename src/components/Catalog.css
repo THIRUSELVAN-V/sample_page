@@ -1,0 +1,160 @@
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+
+
+.item img {
+    height: 18rem;
+    width: 17rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.item {
+    position: relative; /* Ensure the overlay stays relative to the item */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: 17rem;
+    border-radius: 1rem;
+    background-color: rgb(237,242,247);
+}
+
+.image-container {
+    position: relative;
+    width: 17rem;
+    height: 18rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    overflow: hidden;
+}
+
+.rating {
+    position: absolute; /* Position it absolutely */
+    bottom: 10px; /* Distance from the bottom */
+    left: 10px; /* Distance from the left */
+    display: flex;
+    align-items: baseline; /* Align icon and text */
+    gap: 5px; /* Space between icon and text */
+    margin: 0;
+    top:16rem;
+    color: rgb(246, 214, 7);
+     /* Reset margin */
+}
+
+.item p{
+    margin: 6px;
+}
+
+.item .overlay {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #efebeb;
+    opacity: 0.8;
+    transition: top 0.4s ease;
+}
+
+.item:hover .overlay {
+    top: 0;
+}
+h2{
+    margin-left: 10%;
+    width: 20%;
+    padding: 15px;
+    font-family:cursive;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.item .btn {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background-color: #007bff;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.item:hover .btn {
+    display: block;
+    opacity: 1;
+}
+
+.item .name ,.description{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #333;
+    align-self: flex-start;
+    text-transform: capitalize;
+    padding-left: 6px;
+}
+
+/* Styling for price */
+ .price {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #007bff;
+    margin-top: 5px;
+
+    align-self: start;
+    margin-left: 01rem;
+    
+}
+.filter{
+    margin-left: 35%;
+    margin-bottom: 3%;
+    align-items: center;
+}
+.btns {
+    height: 2.5rem;
+   width: 5vw;
+    margin-right: 10px;
+    border:2px solid #007bff;
+    border-radius: 0.5rem;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+
+}
+ button:hover{
+    background-color: white;
+    color: #007bff;
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+ 
+}
+
+/* Styling for rating */
+
+
+/* Styling for description */
+.item .description {
+    font-size: 0.9rem;
+    color: #555;
+   margin: 0;
+    align-self:start;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+   
+   
+}

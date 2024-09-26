@@ -1,7 +1,13 @@
 import React from 'react'
 import { IoPlayCircleOutline } from "react-icons/io5";
+import { useNavigate } from 'react-router-dom';
 const First = () => {
+    const navigate = useNavigate();
+    const handlenav = () =>{
+        navigate("/catalog")
+    }
   return (
+    <div style={{height:"97vh",width:"98vw"}}>
     <div style={{width:"100%",height:"100%"}}>
         <div style={{width:"100%",height:"15%",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
             <div style={{height:"100%",width:"47%",display:"flex",alignItems:"center"}}>
@@ -23,7 +29,7 @@ const First = () => {
                 <div style={{fontSize:"50px",fontWeight:"bolder",backgroundColor:"#6415ff",color:"white"}}>Meals Near You.</div>
                 <div style={{color:"gray",padding:"70px",fontSize:"17px"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                 <div style={{display:"flex",marginBottom:"8%",width:"100%",height:"10%",alignItems:"center"}}>
-                    <button style={{height:"100%",marginRight:"5%",marginLeft:"8%",width:"25%",backgroundColor:"#6415ff",border:"none",borderRadius:"5px",color:"white",fontSize:"16px",fontWeight:"bold"}}>Order Now</button>
+                    <button onClick={handlenav} style={{height:"100%",marginRight:"5%",marginLeft:"8%",width:"25%",backgroundColor:"#6415ff",border:"none",borderRadius:"5px",color:"white",fontSize:"16px",fontWeight:"bold"}}>Order Now</button>
                     <div style={{fontSize:"17px",color:"gray",alignItems:"center",display:"flex"}}><IoPlayCircleOutline size={50} /> Meet the Chefs</div>
                 </div>
             </div>
@@ -31,6 +37,7 @@ const First = () => {
                 <img style={{height:"83%",borderRadius:"30px"}} src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80" alt="food" />
             </div>
         </div>
+    </div>
     </div>
   )
 }
