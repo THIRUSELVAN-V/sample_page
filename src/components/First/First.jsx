@@ -6,6 +6,7 @@ const First = () => {
     const handlenav = () =>{
         navigate("/catalog")
     }
+    //HI
   return (
     <div style={{height:"97vh",width:"98vw"}}>
     <div style={{width:"100%",height:"100%"}}>
