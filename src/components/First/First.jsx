@@ -38,7 +38,7 @@ const First = () => {
                 <img style={{height:"83%",borderRadius:"30px"}} src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80" alt="food" />
             </div>
         </div>
-        <div></div>
+        <div>hi</div>
     </div>
     </div>
   )
